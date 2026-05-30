@@ -1,13 +1,12 @@
 const tiers = [
   {
     name: "Starter",
-    price: "£249",
+    price: "£99",
     cadence: "/month",
-    tagline: "For businesses getting their first leads online.",
+    tagline: "A low-risk way to get your first leads online.",
     features: [
       "1 ad channel (Google or Meta)",
-      "Landing page included",
-      "Monthly performance report",
+      "Self-serve performance dashboard",
       "Email support",
     ],
     cta: "Start with Starter",
