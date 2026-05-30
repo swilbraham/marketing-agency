@@ -12,6 +12,15 @@ TypeScript, and Tailwind CSS 4.
 - **Testimonials** — social proof from local business owners
 - **Contact** — lead form that posts to an API route, with success state
 
+## Client landing-page template (`/lp`)
+
+`app/lp/page.tsx` is a reusable, conversion-focused landing page you can hand to
+clients (the "free landing page" offered on every pricing tier). All content is
+driven by a single `config` object at the top of the file — to make a new one,
+copy the `app/lp` folder to a new route and edit the business name, accent colour
+(one hex), phone, offer, photos, and reviews. It's tuned for lead-generation /
+local service businesses; the form posts to `/api/contact`.
+
 ## Local development
 
 ```bash
