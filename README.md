@@ -8,7 +8,7 @@ TypeScript, and Tailwind CSS 4.
 
 - **Hero** with headline, CTAs, and headline stats
 - **Services** — six Meta-focused cards (campaign management, creative, targeting, retargeting, landing pages, tracking)
-- **Pricing** — three tiers (Starter £99 / Growth £599 / Scale custom)
+- **Pricing** — four tiers (Starter £99 / Plus £299 / Growth £599 / Scale custom)
 - **Testimonials** — social proof from local business owners
 - **Contact** — lead form that posts to an API route, with success state
 

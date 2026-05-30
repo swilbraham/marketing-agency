@@ -5,12 +5,28 @@ const tiers = [
     cadence: "/month",
     tagline: "A low-risk way to get your first leads from Meta.",
     features: [
+      "Free conversion landing page",
       "1 Facebook & Instagram campaign",
-      "Managed & optimised for you",
+      "Set up using your own photos",
       "Self-serve performance dashboard",
       "Email support",
     ],
     cta: "Start with Starter",
+    featured: false,
+  },
+  {
+    name: "Plus",
+    price: "£299",
+    cadence: "/month",
+    tagline: "Done-for-you ads with creative, made for growing businesses.",
+    features: [
+      "Free conversion landing page",
+      "1–2 campaigns, actively optimised",
+      "A few image ads made for you",
+      "Basic retargeting",
+      "Monthly report & call",
+    ],
+    cta: "Choose Plus",
     featured: false,
   },
   {
@@ -19,11 +35,12 @@ const tiers = [
     cadence: "/month",
     tagline: "Our most popular plan for steady, predictable growth.",
     features: [
-      "Facebook & Instagram ads, fully managed",
-      "Ad creative & video made for you",
-      "Retargeting campaigns",
-      "Conversion landing page",
+      "Free conversion landing page",
+      "Multiple campaigns & audiences",
+      "Custom creative & short video",
+      "Full retargeting campaigns",
       "Dedicated account manager",
+      "Fortnightly strategy calls",
     ],
     cta: "Choose Growth",
     featured: true,
@@ -35,8 +52,8 @@ const tiers = [
     tagline: "For multi-location or high-volume businesses.",
     features: [
       "Everything in Growth",
-      "Multiple campaigns & audiences",
       "Ongoing creative & video testing",
+      "Advanced audience testing",
       "Pixel & Conversions API setup",
       "Weekly strategy calls",
     ],
@@ -57,9 +74,19 @@ export default function Pricing() {
             No setup fees, no long contracts. Just one flat monthly price, plus
             your ad budget paid directly to Meta.
           </p>
+          <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white">
+            <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fillRule="evenodd"
+                d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.1 3.1 6.8-6.8a1 1 0 011.4 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+            Every plan includes a free conversion landing page
+          </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {tiers.map((t) => (
             <div
               key={t.name}
