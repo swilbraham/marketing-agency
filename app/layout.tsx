@@ -8,13 +8,13 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Brightside Marketing — More customers for small businesses",
+  title: "Brightside — Meta ads for small businesses",
   description:
-    "Brightside Marketing helps local and small businesses get found, get leads, and grow with done-for-you ads, websites, and SEO.",
+    "Brightside is a Facebook & Instagram ads agency for small and local businesses. Done-for-you Meta campaigns that bring you more customers.",
   openGraph: {
-    title: "Brightside Marketing",
+    title: "Brightside — Meta Ads Agency",
     description:
-      "Done-for-you marketing that brings local businesses more customers.",
+      "Done-for-you Facebook & Instagram ads that bring local businesses more customers.",
     type: "website",
   },
 };

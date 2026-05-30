@@ -23,8 +23,8 @@ export default function Footer() {
           </a>
         </div>
         <p className="mt-8 text-center text-sm text-slate-400">
-          © {new Date().getFullYear()} Brightside Marketing. Helping small
-          businesses grow.
+          © {new Date().getFullYear()} Brightside. Facebook &amp; Instagram ads
+          for small businesses.
         </p>
       </div>
     </footer>

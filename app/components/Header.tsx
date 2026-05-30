@@ -38,7 +38,7 @@ export default function Header() {
             href="#contact"
             className="rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-brand-700"
           >
-            Get a free audit
+            Free Meta audit
           </a>
         </nav>
 
@@ -76,7 +76,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="rounded-full bg-brand-600 px-5 py-2 text-center text-sm font-semibold text-white"
             >
-              Get a free audit
+              Free Meta audit
             </a>
           </div>
         </nav>

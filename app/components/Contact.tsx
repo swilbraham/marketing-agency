@@ -39,12 +39,12 @@ export default function Contact() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2">
         <div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Get your free marketing audit
+            Get your free Meta ads audit
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             Tell us about your business and we’ll send back a no-obligation plan
-            showing exactly how we’d get you more customers — usually within one
-            working day.
+            showing exactly how we’d get you more customers from Facebook and
+            Instagram — usually within one working day.
           </p>
           <ul className="mt-8 space-y-4">
             {[
@@ -109,7 +109,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={4}
-                  placeholder="e.g. more local bookings, a new website, better Google ranking…"
+                  placeholder="e.g. more local bookings, more enquiries from Facebook & Instagram…"
                   className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                 />
               </div>

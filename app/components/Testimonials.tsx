@@ -1,19 +1,19 @@
 const testimonials = [
   {
     quote:
-      "Within three weeks our phone was ringing with local jobs. Best money we spend each month, no contest.",
+      "Within three weeks our Facebook ads had the phone ringing with local jobs. Best money we spend each month, no contest.",
     name: "Dave R.",
     role: "Carpet Cleaning, Wirral",
   },
   {
     quote:
-      "They rebuilt our website and set up the ads. Bookings are up around 40% and I barely had to lift a finger.",
+      "The Instagram ad videos they made for us look brilliant. Bookings are up around 40% and I barely had to lift a finger.",
     name: "Sarah M.",
     role: "Window Cleaning, Chester",
   },
   {
     quote:
-      "Finally a marketing company that explains things in plain English and actually delivers leads.",
+      "Finally someone who actually knows Meta ads inside out, explains it in plain English, and delivers the leads.",
     name: "Tom B.",
     role: "Oven Cleaning, Liverpool",
   },

@@ -1,12 +1,13 @@
-# Brightside Marketing
+# Brightside
 
-A marketing website for an agency that helps small and local businesses get more
-customers. Built with Next.js 16 (App Router), TypeScript, and Tailwind CSS 4.
+A website for a **Meta ads agency** (Facebook & Instagram) that helps small and
+local businesses get more customers. Built with Next.js 16 (App Router),
+TypeScript, and Tailwind CSS 4.
 
 ## Sections
 
 - **Hero** with headline, CTAs, and headline stats
-- **Services** — six service cards (ads, websites, SEO, follow-up, social, reviews)
+- **Services** — six Meta-focused cards (campaign management, creative, targeting, retargeting, landing pages, tracking)
 - **Pricing** — three tiers (Starter £99 / Growth £599 / Scale custom)
 - **Testimonials** — social proof from local business owners
 - **Contact** — lead form that posts to an API route, with success state

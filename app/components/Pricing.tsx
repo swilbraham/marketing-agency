@@ -3,9 +3,10 @@ const tiers = [
     name: "Starter",
     price: "£99",
     cadence: "/month",
-    tagline: "A low-risk way to get your first leads online.",
+    tagline: "A low-risk way to get your first leads from Meta.",
     features: [
-      "1 ad channel (Google or Meta)",
+      "1 Facebook & Instagram campaign",
+      "Managed & optimised for you",
       "Self-serve performance dashboard",
       "Email support",
     ],
@@ -18,10 +19,10 @@ const tiers = [
     cadence: "/month",
     tagline: "Our most popular plan for steady, predictable growth.",
     features: [
-      "Google + Meta ads",
-      "Conversion-built website",
-      "Local SEO & Google Maps",
-      "Automated lead follow-up",
+      "Facebook & Instagram ads, fully managed",
+      "Ad creative & video made for you",
+      "Retargeting campaigns",
+      "Conversion landing page",
       "Dedicated account manager",
     ],
     cta: "Choose Growth",
@@ -34,9 +35,9 @@ const tiers = [
     tagline: "For multi-location or high-volume businesses.",
     features: [
       "Everything in Growth",
-      "Multi-location campaigns",
-      "Social content & reels",
-      "Reputation management",
+      "Multiple campaigns & audiences",
+      "Ongoing creative & video testing",
+      "Pixel & Conversions API setup",
       "Weekly strategy calls",
     ],
     cta: "Talk to us",
@@ -54,7 +55,7 @@ export default function Pricing() {
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             No setup fees, no long contracts. Just one flat monthly price, plus
-            your ad budget paid directly to the platforms.
+            your ad budget paid directly to Meta.
           </p>
         </div>
 

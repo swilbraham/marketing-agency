@@ -1,33 +1,33 @@
 const services = [
   {
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    title: "Paid Ads",
-    desc: "Google & Meta ad campaigns that put you in front of ready-to-buy customers in your area.",
+    title: "Campaign management",
+    desc: "End-to-end Facebook & Instagram ad campaigns, planned and optimised daily by a Meta specialist.",
   },
   {
-    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm0 13h16",
-    title: "Websites that convert",
-    desc: "Fast, mobile-first sites designed to turn visitors into phone calls and bookings.",
+    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm0 13h16M9 9l2.5 3L14 9.5 17 13H7l2-4z",
+    title: "Ad creative & video",
+    desc: "Thumb-stopping images and short videos made for the feed, so your ads actually get noticed.",
   },
   {
     icon: "M21 21l-4.35-4.35M11 17a6 6 0 100-12 6 6 0 000 12z",
-    title: "Local SEO",
-    desc: "Rank higher on Google Maps and search so customers find you first, not your competitors.",
+    title: "Audience targeting",
+    desc: "Reach the right people in your area with precise interest, location, and lookalike audiences.",
   },
   {
-    icon: "M3 5h12M3 10h12M3 15h8M17 5l4 4-4 4",
-    title: "Lead follow-up",
-    desc: "Automated texts and emails that respond instantly so no enquiry ever slips through.",
+    icon: "M3 12a9 9 0 1018 0M3 12l3-3M3 12l3 3",
+    title: "Retargeting",
+    desc: "Win back people who clicked but didn't buy with follow-up ads that bring them home.",
   },
   {
-    icon: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z",
-    title: "Social content",
-    desc: "Done-for-you posts and reels that keep your business top of mind in the community.",
+    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm5 14h6",
+    title: "Conversion landing pages",
+    desc: "Fast, mobile-first pages built for your Meta traffic that turn clicks into calls and bookings.",
   },
   {
-    icon: "M9 19V6l12-3v13M9 9l12-3M6 18a3 3 0 11-6 0 3 3 0 016 0z",
-    title: "Reviews & reputation",
-    desc: "Collect more 5-star reviews on autopilot and build trust before customers even call.",
+    icon: "M3 3v18h18M7 14l4-4 3 3 5-6",
+    title: "Tracking & reporting",
+    desc: "Meta Pixel and Conversions API set up properly, with clear reports on what your spend returns.",
   },
 ];
 
@@ -36,11 +36,11 @@ export default function Services() {
     <section id="services" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Everything you need to grow, in one place
+          One platform. Done properly.
         </h2>
         <p className="mt-4 text-lg text-slate-600">
-          Pick one service or let us run the whole engine. Either way, you get a
-          dedicated team and a single point of contact.
+          We don&rsquo;t spread ourselves thin across ten channels. We do Meta
+          ads &mdash; Facebook and Instagram &mdash; and we do them really well.
         </p>
       </div>
 

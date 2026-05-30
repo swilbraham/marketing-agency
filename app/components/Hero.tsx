@@ -1,5 +1,5 @@
 const stats = [
-  { value: "3.4x", label: "Avg. return on ad spend" },
+  { value: "3.4x", label: "Avg. return on Meta ad spend" },
   { value: "120+", label: "Local businesses grown" },
   { value: "14 days", label: "To your first new leads" },
 ];
@@ -13,23 +13,23 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-brand-700 shadow-sm ring-1 ring-brand-100">
-            Marketing built for small &amp; local businesses
+            Facebook &amp; Instagram ads for small businesses
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl md:text-6xl">
-            More customers,{" "}
-            <span className="text-brand-600">without the guesswork.</span>
+            More customers from{" "}
+            <span className="text-brand-600">Facebook &amp; Instagram.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            We run the ads, build the websites, and handle the follow-up so you
-            can stay focused on the work you do best. Simple pricing, real
-            results, no jargon.
+            We&rsquo;re a Meta ads specialist. We plan the campaigns, make the
+            creative, and optimise every day so you get more leads from
+            Facebook and Instagram &mdash; without the guesswork.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href="#contact"
               className="w-full rounded-full bg-brand-600 px-7 py-3 text-center font-semibold text-white shadow-lg shadow-brand-600/20 transition hover:bg-brand-700 sm:w-auto"
             >
-              Get my free marketing audit
+              Get my free Meta ads audit
             </a>
             <a
               href="#services"
