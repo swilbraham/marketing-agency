@@ -7,7 +7,7 @@ customers. Built with Next.js 16 (App Router), TypeScript, and Tailwind CSS 4.
 
 - **Hero** with headline, CTAs, and headline stats
 - **Services** — six service cards (ads, websites, SEO, follow-up, social, reviews)
-- **Pricing** — three tiers (Starter / Growth / Scale)
+- **Pricing** — three tiers (Starter £249 / Growth £599 / Scale custom)
 - **Testimonials** — social proof from local business owners
 - **Contact** — lead form that posts to an API route, with success state
 

@@ -1,7 +1,7 @@
 const tiers = [
   {
     name: "Starter",
-    price: "£499",
+    price: "£249",
     cadence: "/month",
     tagline: "For businesses getting their first leads online.",
     features: [
@@ -15,7 +15,7 @@ const tiers = [
   },
   {
     name: "Growth",
-    price: "£999",
+    price: "£599",
     cadence: "/month",
     tagline: "Our most popular plan for steady, predictable growth.",
     features: [
