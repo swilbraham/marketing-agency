@@ -39,17 +39,17 @@ export default function Contact() {
       <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2">
         <div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Get your free Meta ads audit
+            See it with your own prices
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Tell us about your business and we’ll send back a no-obligation plan
-            showing exactly how we’d get you more customers from Facebook and
-            Instagram — usually within one working day.
+            Tell us what you do and what you charge, and we’ll set the
+            calculator up with your services and rates so you can see it
+            working on your own jobs — usually within one working day.
           </p>
           <ul className="mt-8 space-y-4">
             {[
-              "A clear breakdown of where your leads will come from",
-              "An honest estimate of cost and expected return",
+              "Set up with your real services and rates",
+              "A straight answer on cost and what it does",
               "No pressure, no contracts, no jargon",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-slate-700">
@@ -82,7 +82,7 @@ export default function Contact() {
               </div>
               <h3 className="mt-4 text-xl font-semibold">Thanks — we’ve got it!</h3>
               <p className="mt-2 text-slate-600">
-                We’ll be in touch within one working day with your free audit.
+                We’ll be in touch within one working day.
               </p>
               <button
                 onClick={() => setStatus("idle")}
@@ -125,7 +125,7 @@ export default function Contact() {
                 disabled={status === "loading"}
                 className="w-full rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-700 disabled:opacity-60"
               >
-                {status === "loading" ? "Sending…" : "Send my free audit request"}
+                {status === "loading" ? "Sending…" : "Send my details"}
               </button>
               <p className="text-center text-xs text-slate-400">
                 We’ll only use your details to reply. No spam, ever.

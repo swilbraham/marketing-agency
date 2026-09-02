@@ -20,10 +20,10 @@ const proof = [
     cta: "Visit the product",
   },
   {
-    title: "Client landing page",
-    body: "The lead-generation page template we build local service sites on. Same one our clients get.",
-    href: "/lp",
-    cta: "See the template",
+    title: "Fresh For Less booking page",
+    body: "A live client site taking real bookings. Pick a service, choose a slot, done \u2014 no phone call needed.",
+    href: "https://www.freshforlesscarpetcleaning.co.uk/book",
+    cta: "See it live",
   },
 ];
 

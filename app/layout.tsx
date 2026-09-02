@@ -8,13 +8,13 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Brightside — marketing systems for trades",
+  title: "Brightside — quoting software for trades",
   description:
-    "Websites, ads, an instant satellite quote calculator and an AI receptionist for local trades. Try the live demos — no sign-up.",
+    "An instant satellite quote calculator, lead-generation websites and an AI receptionist for local trades. Try the live demos — no sign-up.",
   openGraph: {
-    title: "Brightside — marketing systems for trades",
+    title: "Brightside — quoting software for trades",
     description:
-      "Get found, quote instantly, never miss a call. Live software for local trades.",
+      "Quote instantly, get found, never miss a call. Live software for local trades.",
     type: "website",
   },
 };

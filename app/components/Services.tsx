@@ -1,33 +1,33 @@
-const services = [
+const included = [
   {
     icon: "M13 10V3L4 14h7v7l9-11h-7z",
-    title: "Campaign management",
-    desc: "End-to-end Facebook & Instagram ad campaigns, planned and optimised daily by a Meta specialist.",
+    title: "Set up for you",
+    desc: "You send us your services and rates. We build it, install it and hand it over working. Nothing for you to configure.",
   },
   {
-    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm0 13h16M9 9l2.5 3L14 9.5 17 13H7l2-4z",
-    title: "Ad creative & video",
-    desc: "Thumb-stopping images and short videos made for the feed, so your ads actually get noticed.",
+    icon: "M12 3v18m9-9H3",
+    title: "Your prices, your rules",
+    desc: "Every service, rate and minimum charge is yours. Change one and it's live the same day — no developer, no rebuild.",
   },
   {
-    icon: "M21 21l-4.35-4.35M11 17a6 6 0 100-12 6 6 0 000 12z",
-    title: "Audience targeting",
-    desc: "Reach the right people in your area with precise interest, location, and lookalike audiences.",
+    icon: "M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.5 12s3.5-7 9.5-7 9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7z",
+    title: "Looks like your business",
+    desc: "Your colours, logo and wording throughout — down to the colour of the shape drawn on the map. Nobody sees ours.",
   },
   {
-    icon: "M3 12a9 9 0 1018 0M3 12l3-3M3 12l3 3",
-    title: "Retargeting",
-    desc: "Win back people who clicked but didn't buy with follow-up ads that bring them home.",
+    icon: "M7 4h10a1 1 0 011 1v14a1 1 0 01-1 1H7a1 1 0 01-1-1V5a1 1 0 011-1zm4 14h2",
+    title: "Built for phones",
+    desc: "Most people will use it one-handed on a phone in their driveway. That's what it's designed and tested for.",
   },
   {
-    icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm5 14h6",
-    title: "Conversion landing pages",
-    desc: "Fast, mobile-first pages built for your Meta traffic that turn clicks into calls and bookings.",
+    icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    title: "Enquiries straight to you",
+    desc: "Name, number, address and the measurement, in your inbox. No portal to log into, no leads shared with rivals.",
   },
   {
-    icon: "M3 3v18h18M7 14l4-4 3 3 5-6",
-    title: "Tracking & reporting",
-    desc: "Meta Pixel and Conversions API set up properly, with clear reports on what your spend returns.",
+    icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+    title: "Works with what you have",
+    desc: "Bolt it onto your current website as a page or an embed, or let us build the site around it. Either works.",
   },
 ];
 
@@ -36,16 +36,16 @@ export default function Services() {
     <section id="services" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          One platform. Done properly.
+          You buy the system, not our time
         </h2>
         <p className="mt-4 text-lg text-slate-600">
-          We don&rsquo;t spread ourselves thin across ten channels. We do Meta
-          ads &mdash; Facebook and Instagram &mdash; and we do them really well.
+          No retainers, no hours billed, nothing to learn. We build the thing
+          that quotes for you, install it, and keep it running.
         </p>
       </div>
 
       <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((s) => (
+        {included.map((s) => (
           <div
             key={s.title}
             className="group rounded-2xl border border-slate-100 p-7 transition hover:border-brand-200 hover:shadow-lg hover:shadow-brand-600/5"

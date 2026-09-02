@@ -39,28 +39,15 @@ export const products: Product[] = [
     name: "Lead-generation websites",
     tagline: "One-page sites built to make the phone ring",
     blurb:
-      "Fast, mobile-first sites for local trades. No page builder bloat, no monthly platform fee. Built to be found on Google and to turn visitors into calls.",
+      "Fast, mobile-first sites for local trades, with online booking if you want it. No page builder bloat, no monthly platform fee. Built to be found on Google and to turn visitors into booked jobs.",
     status: "live",
-    demo: "/lp",
+    demo: "https://www.freshforlesscarpetcleaning.co.uk/book",
     icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v9a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm5 14h6",
     bullets: [
       "Live in days, not months",
       "Built for local search from the start",
-      "Enquiries straight to your inbox or phone",
-    ],
-  },
-  {
-    slug: "ads",
-    name: "Meta & Google ads",
-    tagline: "Managed campaigns that bring the work in",
-    blurb:
-      "Facebook, Instagram and Google campaigns planned, written and optimised for local service businesses — with conversion tracking set up properly so you know what your spend returns.",
-    status: "live",
-    icon: "M3 3v18h18M7 14l4-4 3 3 5-6",
-    bullets: [
-      "Campaign build, creative and daily optimisation",
-      "Conversion tracking that actually reports real enquiries",
-      "Plain-English reporting, no jargon",
+      "Online booking, or enquiries straight to your inbox",
+      "Real example: Fresh For Less Carpet Cleaning",
     ],
   },
   {

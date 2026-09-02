@@ -9,17 +9,17 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-brand-700 shadow-sm ring-1 ring-brand-100">
-            Marketing systems for trades &amp; local services
+            Quoting software for trades &amp; local services
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl md:text-6xl">
             More jobs.{" "}
             <span className="text-brand-600">Less chasing.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            We build the systems that get local trades found, quoted and
-            booked &mdash; websites, ads, an instant quote calculator and an AI
-            receptionist. Everything below is live software you can try right
-            now, not a slide deck.
+            Software that answers &ldquo;how much?&rdquo; before you do. An
+            instant quote calculator, a website built to be found, and an AI
+            receptionist for the calls you miss. Yours to own &mdash; we
+            don&rsquo;t run your ads or touch your budget.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a

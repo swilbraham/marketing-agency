@@ -8,8 +8,9 @@ export default function Tools() {
           Everything a trade needs to win work
         </h2>
         <p className="mt-4 text-lg text-slate-600">
-          Get found, answer &ldquo;how much?&rdquo; instantly, never miss a
-          call. Take one piece or the lot &mdash; they work better together.
+          Answer &ldquo;how much?&rdquo; instantly, get found on Google, never
+          miss a call. Take one piece or the lot &mdash; they work better
+          together.
         </p>
       </div>
 
