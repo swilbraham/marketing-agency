@@ -1,5 +1,17 @@
 import { NextResponse } from "next/server";
 
+/**
+ * Enquiries are forwarded to FormSubmit, which needs no API key — just a
+ * destination address in CONTACT_EMAIL, activated once by clicking the link
+ * in the confirmation email FormSubmit sends on the first submission.
+ *
+ * If CONTACT_EMAIL is missing or delivery fails we tell the visitor so and
+ * ask them to email instead. We never claim to have received an enquiry we
+ * have actually dropped.
+ */
+const FALLBACK_MESSAGE =
+  "Sorry — that didn't send. Please try again in a few minutes; we're on it.";
+
 export async function POST(request: Request) {
   let data: Record<string, unknown>;
   try {
@@ -25,9 +37,48 @@ export async function POST(request: Request) {
     );
   }
 
-  // TODO: connect an email/CRM provider (e.g. Resend, SendGrid, or a webhook).
-  // For now we log the enquiry so the deploy works out of the box.
-  console.log("New audit request:", { name, email, ...data });
+  const to = process.env.CONTACT_EMAIL;
 
-  return NextResponse.json({ ok: true });
+  if (!to) {
+    console.error(
+      "[contact] CONTACT_EMAIL is not set — enquiry NOT delivered:",
+      { name, email, ...data }
+    );
+    return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 500 });
+  }
+
+  try {
+    const res = await fetch(
+      `https://formsubmit.co/ajax/${encodeURIComponent(to)}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `Brightside enquiry — ${name}`,
+          _template: "table",
+          _captcha: "false",
+          ...data,
+          name,
+          email,
+        }),
+      }
+    );
+
+    if (!res.ok) {
+      throw new Error(`FormSubmit returned ${res.status}`);
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    // Log the whole enquiry so it can be recovered from the Vercel logs.
+    console.error("[contact] delivery failed — enquiry NOT delivered:", err, {
+      name,
+      email,
+      ...data,
+    });
+    return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 500 });
+  }
 }
