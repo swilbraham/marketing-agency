@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#testimonials", label: "Results" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#tools", label: "What we build" },
+  { href: "/tools/quote-calculator", label: "Quote calculator" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2 font-bold text-lg">
+        <a href="/" className="flex items-center gap-2 font-bold text-lg">
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-white">
             B
           </span>
@@ -35,10 +35,10 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-brand-700"
           >
-            Free Meta audit
+            Book a call
           </a>
         </nav>
 
@@ -72,11 +72,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setOpen(false)}
               className="rounded-full bg-brand-600 px-5 py-2 text-center text-sm font-semibold text-white"
             >
-              Free Meta audit
+              Book a call
             </a>
           </div>
         </nav>

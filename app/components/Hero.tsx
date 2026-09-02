@@ -1,8 +1,4 @@
-const stats = [
-  { value: "3.4x", label: "Avg. return on Meta ad spend" },
-  { value: "120+", label: "Local businesses grown" },
-  { value: "14 days", label: "To your first new leads" },
-];
+import { featuredProduct } from "../data/products";
 
 export default function Hero() {
   return (
@@ -13,47 +9,60 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-brand-700 shadow-sm ring-1 ring-brand-100">
-            Facebook &amp; Instagram ads for small businesses
+            Marketing systems for trades &amp; local services
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl md:text-6xl">
-            More customers from{" "}
-            <span className="text-brand-600">Facebook &amp; Instagram.</span>
+            More jobs.{" "}
+            <span className="text-brand-600">Less chasing.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            We&rsquo;re a Meta ads specialist. We plan the campaigns, make the
-            creative, and optimise every day so you get more leads from
-            Facebook and Instagram &mdash; without the guesswork.
+            We build the systems that get local trades found, quoted and
+            booked &mdash; websites, ads, an instant quote calculator and an AI
+            receptionist. Everything below is live software you can try right
+            now, not a slide deck.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="#contact"
+              href={featuredProduct.demo}
+              target="_blank"
+              rel="noopener"
               className="w-full rounded-full bg-brand-600 px-7 py-3 text-center font-semibold text-white shadow-lg shadow-brand-600/20 transition hover:bg-brand-700 sm:w-auto"
             >
-              Get my free Meta ads audit
+              Try the quote calculator
             </a>
             <a
-              href="#services"
+              href="#tools"
               className="w-full rounded-full bg-white px-7 py-3 text-center font-semibold text-slate-700 ring-1 ring-slate-200 transition hover:ring-slate-300 sm:w-auto"
             >
-              See what we do
+              See what we build
             </a>
           </div>
           <p className="mt-4 text-sm text-slate-500">
-            No contracts. Cancel anytime. First audit is on us.
+            No contracts. No sign-up needed to try the demos.
           </p>
         </div>
 
-        <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-100"
-            >
-              <dt className="text-3xl font-bold text-brand-600">{s.value}</dt>
-              <dd className="mt-1 text-sm text-slate-500">{s.label}</dd>
-            </div>
-          ))}
-        </dl>
+        {/* Proof, not claims: things a visitor can open and use. */}
+        <div className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3">
+          <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-100">
+            <p className="text-3xl font-bold text-brand-600">30 sec</p>
+            <p className="mt-1 text-sm text-slate-500">
+              From postcode to priced quote
+            </p>
+          </div>
+          <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-100">
+            <p className="text-3xl font-bold text-brand-600">~5%</p>
+            <p className="mt-1 text-sm text-slate-500">
+              Typical accuracy of a satellite measurement
+            </p>
+          </div>
+          <div className="rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-slate-100">
+            <p className="text-3xl font-bold text-brand-600">24/7</p>
+            <p className="mt-1 text-sm text-slate-500">
+              Calls answered while you&rsquo;re on the tools
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
