@@ -16,10 +16,10 @@ export default function Footer() {
             <a href="#contact" className="hover:text-brand-600">Contact</a>
           </nav>
           <a
-            href="mailto:hello@brightside.example"
+            href="mailto:hello@skyquote.co.uk"
             className="text-sm font-medium text-brand-600 hover:text-brand-700"
           >
-            hello@brightside.example
+            hello@skyquote.co.uk
           </a>
         </div>
         <p className="mt-8 text-center text-sm text-slate-400">
