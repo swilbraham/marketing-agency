@@ -33,7 +33,8 @@ const included = [
 
 export default function Services() {
   return (
-    <section id="services" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="services" className="border-t border-slate-100 bg-slate-50/50 py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           You buy the system, not our time
@@ -59,6 +60,7 @@ export default function Services() {
             <p className="mt-2 text-slate-600">{s.desc}</p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
