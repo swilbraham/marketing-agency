@@ -71,7 +71,7 @@ export default function Hero() {
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
-              No sign-up. From £299 to have it built and installed.
+              No sign-up. From £199 to have it built and installed.
             </p>
           </div>
 

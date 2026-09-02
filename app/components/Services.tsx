@@ -40,8 +40,8 @@ export default function Services() {
           You buy the system, not our time
         </h2>
         <p className="mt-4 text-lg text-slate-600">
-          No retainers, no hours billed, nothing to learn. We build the thing
-          that quotes for you, install it, and keep it running.
+          No retainers, no hours billed, nothing to learn. We build it, set it
+          up with your prices, and keep it running.
         </p>
       </div>
 

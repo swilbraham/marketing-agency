@@ -1,84 +1,76 @@
 /* ---------------------------------------------------------------
-   Edit the numbers here. Setup is a one-off; monthly covers
-   hosting, support and any changes you ask for.
+   Two ways to buy. Edit the numbers and wording here.
    --------------------------------------------------------------- */
 const tiers = [
   {
-    name: "Calculator",
-    setup: "£299",
-    monthly: "£29",
-    tagline: "Add the quote calculator to the website you already have.",
+    name: "Complete landing page",
+    setup: "£399",
+    monthly: "£79",
+    tagline:
+      "A fully branded page built to run Google and Meta ads at, with the calculator in it.",
     features: [
-      "Instant quote calculator, set up with your services and rates",
-      "Matched to your existing branding",
+      "Landing page designed around your business and branding",
+      "Your own domain and email address, set up for you",
+      "Quote calculator built in, with your services and rates",
+      "Built for Google Ads and Meta traffic to land on",
+      "Unlimited edits — send them over and we make them",
+      "Hosting, SSL and the Google mapping bill covered",
       "Enquiries emailed to you with the measurement attached",
-      "Works as its own page or embedded in your site",
-      "Google mapping costs covered",
     ],
-    cta: "Get the calculator",
-    featured: false,
-  },
-  {
-    name: "Website + Calculator",
-    setup: "£449",
-    monthly: "£39",
-    tagline: "A site built to be found, with instant quoting built in.",
-    features: [
-      "Everything in Calculator",
-      "One-page lead-generation website",
-      "Built for local search from day one",
-      "Your photos, your reviews, your offer",
-      "Hosting and SSL included",
-    ],
-    cta: "Get the full system",
+    cta: "Get my landing page",
     featured: true,
   },
   {
-    name: "Multi-service",
-    setup: "£499",
-    monthly: "£69",
-    tagline: "For larger outfits running several services or areas.",
+    name: "Calculator embed",
+    setup: "£199",
+    monthly: "£39",
+    tagline:
+      "The calculator on its own, to drop into the website you already have.",
     features: [
-      "Everything in Website + Calculator",
-      "Unlimited services and rates in the calculator",
-      "Extra pages for each area you cover",
-      "Priority support, same-day changes",
-      "Quarterly review of what's converting",
+      "Calculator branded and set up with your services and rates",
+      "A snippet of code to paste into your WordPress page",
+      "Step-by-step instructions for adding it",
+      "You install it on your site — we tell you exactly how",
+      "Unlimited price and service changes",
+      "Hosting and the Google mapping bill covered",
+      "Enquiries emailed to you with the measurement attached",
     ],
-    cta: "Talk it through",
+    cta: "Get the embed",
     featured: false,
   },
 ];
 
 const included = [
-  "Unlimited price changes — never wait on a developer",
-  "Hosting, SSL and the Google mapping bill",
-  "Fixes and updates for as long as you're with us",
   "No contract — cancel with 30 days' notice",
+  "Unlimited edits for as long as you're with us",
+  "We host it and keep it running, so there's nothing to manage",
+  "On the landing page plan, the domain is yours to keep if you leave",
 ];
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-slate-50 py-20 md:py-28">
+    <section id="pricing" className="bg-slate-50 py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">
+            Pricing
+          </p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
             One job pays for it
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            A one-off fee to build and install it, then a small monthly for
-            hosting, support and any changes you want. No contract, no ad spend
-            to manage, nothing to learn.
+            A one-off fee to build it, then a monthly for hosting, support and
+            as many changes as you want. No contract.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
           {tiers.map((t) => (
             <div
               key={t.name}
               className={`relative flex flex-col rounded-3xl p-8 ${
                 t.featured
-                  ? "bg-ink text-white shadow-2xl ring-2 ring-brand-600 md:-translate-y-4"
+                  ? "bg-ink text-white shadow-2xl ring-2 ring-brand-600"
                   : "bg-white ring-1 ring-slate-200"
               }`}
             >
@@ -148,7 +140,7 @@ export default function Pricing() {
 
         <div className="mx-auto mt-12 max-w-3xl rounded-2xl bg-white p-7 ring-1 ring-slate-200">
           <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-slate-500">
-            Every plan includes
+            Both plans include
           </h3>
           <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {included.map((i) => (
@@ -168,18 +160,6 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
-          <p className="mt-5 text-center text-sm text-slate-500">
-            Call answering is a separate product on its own plan —{" "}
-            <a
-              href="https://answered247.co.uk"
-              target="_blank"
-              rel="noopener"
-              className="font-semibold text-brand-600 hover:underline"
-            >
-              see Answered247
-            </a>
-            .
-          </p>
         </div>
       </div>
     </section>

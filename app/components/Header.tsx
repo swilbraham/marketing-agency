@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 const links = [
-  { href: "/#tools", label: "What we build" },
-  { href: "/tools/quote-calculator", label: "Quote calculator" },
+  { href: "/#how", label: "How it works" },
+  { href: "/tools/quote-calculator", label: "See it working" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/#contact", label: "Contact" },
 ];

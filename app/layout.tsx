@@ -8,11 +8,11 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "SkyQuote — quoting software for trades",
+  title: "SkyQuote — instant quote calculator for trades",
   description:
-    "An instant satellite quote calculator, lead-generation websites and an AI receptionist for local trades. Try the live demos — no sign-up.",
+    "Let customers measure their own roof, driveway or lawn on a satellite map and see your price in 30 seconds. Try the live demo — no sign-up.",
   openGraph: {
-    title: "SkyQuote — quoting software for trades",
+    title: "SkyQuote — instant quote calculator for trades",
     description:
       "Quote instantly, get found, never miss a call. Live software for local trades.",
     type: "website",
