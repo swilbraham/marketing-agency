@@ -47,6 +47,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 500 });
   }
 
+  // FormSubmit refuses requests without a browser origin, and answers 200
+  // with success:"false" when it is unhappy — so the body must be checked,
+  // not just the status code.
+  const origin =
+    request.headers.get("origin") ??
+    new URL(request.url).origin;
+
   try {
     const res = await fetch(
       `https://formsubmit.co/ajax/${encodeURIComponent(to)}`,
@@ -55,9 +62,11 @@ export async function POST(request: Request) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
+          Origin: origin,
+          Referer: `${origin}/`,
         },
         body: JSON.stringify({
-          _subject: `Brightside enquiry — ${name}`,
+          _subject: `SkyQuote enquiry — ${name}`,
           _template: "table",
           _captcha: "false",
           ...data,
@@ -69,6 +78,16 @@ export async function POST(request: Request) {
 
     if (!res.ok) {
       throw new Error(`FormSubmit returned ${res.status}`);
+    }
+
+    const body = (await res.json().catch(() => ({}))) as {
+      success?: string;
+      message?: string;
+    };
+
+    // "success" is the string "true"/"false", not a boolean.
+    if (String(body.success) !== "true") {
+      throw new Error(body.message || "FormSubmit rejected the submission");
     }
 
     return NextResponse.json({ ok: true });

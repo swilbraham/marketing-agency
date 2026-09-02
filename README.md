@@ -1,4 +1,4 @@
-# Brightside
+# SkyQuote
 
 A website for a **Meta ads agency** (Facebook & Instagram) that helps small and
 local businesses get more customers. Built with Next.js 16 (App Router),
@@ -45,7 +45,7 @@ wire up an email or CRM provider in that file (look for the `TODO`). Good option
 2. Push this project:
    ```bash
    git add .
-   git commit -m "Initial commit: Brightside marketing site"
+   git commit -m "Initial commit: SkyQuote marketing site"
    git branch -M main
    git remote add origin https://github.com/<you>/<repo>.git
    git push -u origin main

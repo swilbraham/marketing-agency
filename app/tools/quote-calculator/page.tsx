@@ -7,7 +7,7 @@ import { products } from "../../data/products";
 const product = products.find((p) => p.slug === "quote-calculator")!;
 
 export const metadata: Metadata = {
-  title: "Instant Quote Calculator for trades | Brightside",
+  title: "Instant Quote Calculator for trades | SkyQuote",
   description:
     "Let customers measure their own roof, driveway or lawn on a satellite map and see your price in 30 seconds. Try the live demo — no sign-up.",
 };

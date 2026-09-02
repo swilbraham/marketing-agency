@@ -7,7 +7,7 @@ export default function Footer() {
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-white">
               B
             </span>
-            Brightside<span className="text-brand-600">.</span>
+            SkyQuote<span className="text-brand-600">.</span>
           </a>
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
             <a href="#services" className="hover:text-brand-600">Services</a>
@@ -23,7 +23,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="mt-8 text-center text-sm text-slate-400">
-          © {new Date().getFullYear()} Brightside. Facebook &amp; Instagram ads
+          © {new Date().getFullYear()} SkyQuote. Facebook &amp; Instagram ads
           for small businesses.
         </p>
       </div>

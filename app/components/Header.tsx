@@ -16,11 +16,16 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-2 font-bold text-lg">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-white">
-            B
+          <span className="grid h-9 w-9 place-items-center rounded-lg bg-brand-600 text-white">
+            {/* A roof outline traced on a map — what the product actually does. */}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 10.5 12 4l9 6.5" />
+              <path d="M5.5 9.5V19h13V9.5" />
+              <circle cx="12" cy="14" r="1.6" fill="currentColor" stroke="none" />
+            </svg>
           </span>
           <span>
-            Brightside<span className="text-brand-600">.</span>
+            Sky<span className="text-brand-600">Quote</span>
           </span>
         </a>
 
