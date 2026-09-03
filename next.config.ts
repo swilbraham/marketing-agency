@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
       { source: "/demo", destination: "/demo/index.html" },
       { source: "/demo/measure", destination: "/demo/measure.html" },
       { source: "/demo/embed", destination: "/demo/embed.html" },
+
+      // Client preview: The Exterior Cleaners North West.
+      { source: "/extcleannorthw", destination: "/extcleannorthw/index.html" },
+      { source: "/extcleannorthw/measure", destination: "/extcleannorthw/measure.html" },
+      { source: "/extcleannorthw/embed", destination: "/extcleannorthw/embed.html" },
     ];
   },
 };

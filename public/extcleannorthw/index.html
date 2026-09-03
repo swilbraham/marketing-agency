@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<base href="/extcleannorthw/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instant Cleaning Price Calculator | The Exterior Cleaners North West</title>
+<meta name="description" content="Get an instant roof cleaning, driveway or patio jet washing price in 60 seconds. Type in your address, trace the area on the satellite map and see your approximate price. Free survey, no payment until the job is complete.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Instant Cleaning Price Calculator">
+<meta property="og:description" content="Type in your address, trace your roof, driveway or patio, and get an approximate price in 60 seconds.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* The logo takes more width than a text wordmark, so stop the nav and
+     phone block wrapping onto a second line. */
+  .hdr__in { gap: 18px; }
+  .nav { gap: 20px; }
+  .nav a { white-space: nowrap; }
+  .hdr__cta { gap: 14px; }
+  .hdr__cta .tel small,
+  .hdr__cta .tel > span { white-space: nowrap; }
+  .brand img { height: 44px; }
+  @media (max-width: 900px) { .brand img { height: 38px; } }
+</style>
+
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" style="flex-direction:row;align-items:center"><img src="logo.png" alt="The Exterior Cleaners North West" style="height:48px;width:auto;display:block"></a>
+    <nav class="nav">
+      <a href="#calculator">Price calculator</a>
+      <a href="#how">How it works</a>
+      <a href="#included">What's included</a>
+      <a href="#quote">Get a quote</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="tel" data-tel href="tel:">
+        <small>Call for a free quote</small>
+        <span data-cfg="business.phone">07401 718118</span>
+      </a>
+      <a class="btn btn--primary" href="#calculator">Get my price</a>
+    </div>
+  </div>
+</header>
+<div style="background:#111213;border-bottom:1px solid rgba(255,255,255,.10);font-size:12.5px;color:#9ca3af">
+  <div class="wrap" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:9px 22px">
+    <span style="background:rgba(166,226,46,.14);border:1px solid rgba(166,226,46,.4);color:#a6e22e;font:700 10px/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px">Preview</span>
+    <span>Instant quote calculator built for The Exterior Cleaners North West by
+      <a href="https://skyquote.co.uk" style="color:#a6e22e;font-weight:600">SkyQuote</a>.
+      Not their live website.</span>
+  </div>
+</div>
+
+
+<!-- ============ HERO + CALCULATOR ============ -->
+<section class="hero" id="calculator">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow">Roofs · Driveways · Patios</p>
+        <h1>Your cleaning price in <span class="lime">60 seconds</span></h1>
+        <p class="lead">Pick what needs cleaning, type in your address and trace around it on the satellite
+          map. We'll work out your approximate price straight away — roof cleaning is
+          <strong style="color:#fff">£10 per m²</strong>. No phone calls, no sales pitch, no obligation.</p>
+        <ul class="chips">
+          <li>Moss, algae &amp; lichen removed</li>
+          <li>Fully insured</li>
+          <li>No payment until the job is complete</li>
+        </ul>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#rt-address">Start measuring</a>
+          <a class="btn btn--dark" data-tel href="tel:">Or call <span data-cfg="business.phone">07401 718118</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="padding:22px">
+          <p class="eyebrow" style="margin-bottom:10px">Why measure online?</p>
+          <ul class="ticks">
+            <li>See a real price before anyone visits your home</li>
+            <li>Same satellite measurements our estimators use</li>
+            <li>Accurate to roughly ±5% — confirmed at your free survey</li>
+            <li>Takes about a minute on a phone or laptop</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- THE TOOL -->
+    <div id="roof-tool" style="margin-top:38px"></div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust">
+  <div class="wrap">
+    <ul>
+      <li><b>5★ Rated</b><span>Across Google &amp; Facebook</span></li>
+      <li><b>Fully insured</b><span>Complete peace of mind</span></li>
+      <li><b>1000+ homes</b><span>Cleaned across the North West</span></li>
+      <li><b>Eco friendly</b><span>Safe for family, pets &amp; planet</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap center">
+    <p class="eyebrow">How the calculator works</p>
+    <h2>Three steps. About a minute.</h2>
+    <p class="lead">It uses the same satellite imagery and measuring method a surveyor would use on site.</p>
+    <div class="grid grid--3" style="margin-top:38px;text-align:left">
+      <div class="card">
+        <div class="card__num">1</div>
+        <h3>Find your home</h3>
+        <p>Type your postcode or full address. The map drops straight onto your roof in high-resolution satellite view.</p>
+      </div>
+      <div class="card">
+        <div class="card__num">2</div>
+        <h3>Trace the area</h3>
+        <p>Click each corner of the roof, drive or patio to draw round it. Add extra shapes for a garage, extension or a second patio.</p>
+      </div>
+      <div class="card">
+        <div class="card__num">3</div>
+        <h3>See your price</h3>
+        <p>For roofs we allow for the pitch; drives and patios are measured flat. Multiply by the rate and your price appears instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S INCLUDED ============ -->
+<section id="included" class="sep">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:38px">
+      <p class="eyebrow">What the price covers</p>
+      <h2>We clean. We protect. We enhance.</h2>
+      <p class="lead">Every price below is supply-and-fit, fully insured, with no payment until you're happy.</p>
+    </div>
+    <div class="grid grid--2">
+      <div class="card">
+        <h3>Roof cleaning — £10 per m²</h3>
+        <ul class="ticks" style="margin-top:16px">
+          <li>Full scrape and soft wash of all moss, algae and lichen</li>
+          <li>Biocide treatment to slow regrowth</li>
+          <li>Gutters cleared of the debris we remove</li>
+          <li>Ridge and valley areas checked as we work</li>
+          <li>No high pressure on tiles — soft washing only</li>
+          <li>All waste bagged and taken away</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Driveway &amp; patio jet washing</h3>
+        <ul class="ticks" style="margin-top:16px">
+          <li>Rotary flat-surface clean for an even, stripe-free finish</li>
+          <li>Edges, steps and awkward corners done by lance</li>
+          <li>Weeds, moss and ingrained dirt lifted out of the joints</li>
+          <li>Drains and gullies kept clear as we work</li>
+          <li>Borders, doors and windows protected and rinsed down</li>
+          <li>Re-sanding and sealing available — quoted separately</li>
+        </ul>
+      </div>
+    </div>
+    <div class="center" style="margin-top:32px">
+      <a class="btn btn--primary" href="#calculator">Get my price</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="quote__grid">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2>Turn your estimate into a fixed price</h2>
+        <p class="lead">Send us your measurement and we'll confirm the exact price with a free, no-obligation
+          survey — usually within 24 hours. We reply to every enquiry the same day.</p>
+        <ul class="ticks" style="margin-top:22px">
+          <li><span>Call or WhatsApp <a data-tel href="tel:"><span data-cfg="business.phone">07401 718118</span></a></span></li>
+          <li><span>Email <a data-mailto href="mailto:"><span data-cfg="business.email">hello@example.co.uk</span></a></span></li>
+          <li><span data-cfg="business.serviceArea">Manchester · Cheshire · Lancashire</span></li>
+          <li><span data-cfg="business.hours">Mon–Sat, 8am–6pm</span></li>
+        </ul>
+      </div>
+
+      <form class="form" id="quote-form" method="POST" action="#">
+        <h3 style="margin-bottom:18px">Request your fixed quote</h3>
+        <div class="summary" id="quote-summary"></div>
+
+        <div class="form__row">
+          <div><label for="q-name">Full name</label><input id="q-name" name="name" required placeholder="Jane Smith"></div>
+          <div><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" required placeholder="07…"></div>
+        </div>
+        <label for="q-email">Email</label>
+        <input id="q-email" name="email" type="email" required placeholder="you@email.com">
+
+        <label for="quote-address">Property address</label>
+        <input id="quote-address" name="address" required placeholder="House name/number, street, postcode">
+
+        <label for="q-service">Service</label>
+        <select id="q-service" name="service">
+          <option>Roof cleaning</option>
+          <option>Roof cleaning + gutter clearing</option>
+          <option>Roof re-coating</option>
+          <option>Render cleaning</option>
+          <option>Driveway or patio cleaning</option>
+          <option>Full exterior clean</option>
+        </select>
+
+        <label for="q-msg">Anything we should know? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#6b7280">(optional)</span></label>
+        <textarea id="q-msg" name="message" placeholder="Conservatory, solar panels, access, parking…"></textarea>
+
+        <input type="hidden" name="measurement" id="measurement">
+        <input type="hidden" name="_subject" value="Roof calculator enquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button class="btn btn--primary btn--block" type="submit">Request my fixed quote</button>
+        <p class="form__note">No obligation · No payment until job completion</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px">
+          <b data-cfg="business.name">The Exterior Cleaners North West</b>
+          <span>Roof &amp; exterior cleaning specialists</span>
+        </div>
+        <p>Restoring, protecting and enhancing properties across the North West with expert care and powerful results.</p>
+      </div>
+      <div>
+        <h4 class="mont">Contact</h4>
+        <ul>
+          <li><a data-tel href="tel:"><span data-cfg="business.phone">07401 718118</span></a></li>
+          <li><a data-whatsapp href="#" target="_blank" rel="noopener">WhatsApp us</a></li>
+          <li><a data-mailto href="mailto:"><span data-cfg="business.email">hello@example.co.uk</span></a></li>
+          <li data-cfg="business.hours">Mon–Sat, 8am–6pm</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mont">Links</h4>
+        <ul>
+          <li><a href="#calculator">Price calculator</a></li>
+          <li><a href="measure.html">Full-screen measuring tool</a></li>
+          <li><a href="#quote">Request a quote</a></li>
+          <li><a data-cfg="business.mainSite" data-cfg-attr="href" href="#">Main website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bar">
+      <span>© <span id="year">2026</span> <span data-cfg="business.name">The Exterior Cleaners North West</span>. All rights reserved.</span>
+      <span data-cfg="business.serviceArea">Manchester · Cheshire · Lancashire</span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn--dark" data-tel href="tel:">Call us</a>
+  <a class="btn btn--primary" href="#calculator">Get my price</a>
+</div>
+
+<script src="site-config.js"></script>
+<script src="site.js"></script>
+<script src="measure.js"></script>
+</body>
+</html>

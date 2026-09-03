@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<base href="/extcleannorthw/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roof Measuring Tool | The Exterior Cleaners North West</title>
+<meta name="description" content="Measure your roof on the satellite map and get an approximate roof cleaning price at £10 per m².">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* The logo takes more width than a text wordmark, so stop the nav and
+     phone block wrapping onto a second line. */
+  .hdr__in { gap: 18px; }
+  .nav { gap: 20px; }
+  .nav a { white-space: nowrap; }
+  .hdr__cta { gap: 14px; }
+  .hdr__cta .tel small,
+  .hdr__cta .tel > span { white-space: nowrap; }
+  .brand img { height: 44px; }
+  @media (max-width: 900px) { .brand img { height: 38px; } }
+</style>
+
+<style>
+  .tool__map{height:clamp(420px,64vh,720px)}
+  .page{padding:26px 0 70px}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" style="flex-direction:row;align-items:center"><img src="logo.png" alt="The Exterior Cleaners North West" style="height:48px;width:auto;display:block"></a>
+    <div class="hdr__cta">
+      <a class="tel" data-tel href="tel:">
+        <small>Questions?</small>
+        <span data-cfg="business.phone">07401 718118</span>
+      </a>
+      <a class="btn btn--primary" href="#quote">Get a quote</a>
+    </div>
+  </div>
+</header>
+<div style="background:#111213;border-bottom:1px solid rgba(255,255,255,.10);font-size:12.5px;color:#9ca3af">
+  <div class="wrap" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:9px 22px">
+    <span style="background:rgba(166,226,46,.14);border:1px solid rgba(166,226,46,.4);color:#a6e22e;font:700 10px/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px">Preview</span>
+    <span>Instant quote calculator built for The Exterior Cleaners North West by
+      <a href="https://skyquote.co.uk" style="color:#a6e22e;font-weight:600">SkyQuote</a>.
+      Not their live website.</span>
+  </div>
+</div>
+
+
+<main class="page">
+  <div class="wrap">
+    <p class="eyebrow">£10 per m² · approximate price</p>
+    <h1 style="font-size:clamp(28px,4vw,44px);margin-bottom:12px">Measure your roof</h1>
+    <p class="lead" style="margin-bottom:26px">Search your address, click each corner of the roof, and your
+      approximate cleaning price appears on the right. Add extra shapes for a garage or extension.</p>
+
+    <div id="roof-tool"></div>
+  </div>
+</main>
+
+<section class="quote" id="quote" style="padding:60px 0">
+  <div class="wrap" style="max-width:620px">
+    <p class="eyebrow center">Next step</p>
+    <h2 class="center" style="margin-bottom:26px">Get your fixed price</h2>
+    <form class="form" id="quote-form" method="POST" action="#">
+      <div class="summary" id="quote-summary"></div>
+      <div class="form__row">
+        <div><label for="q-name">Full name</label><input id="q-name" name="name" required placeholder="Jane Smith"></div>
+        <div><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" required placeholder="07…"></div>
+      </div>
+      <label for="q-email">Email</label>
+      <input id="q-email" name="email" type="email" required placeholder="you@email.com">
+      <label for="quote-address">Property address</label>
+      <input id="quote-address" name="address" required placeholder="House name/number, street, postcode">
+      <label for="q-msg">Anything we should know? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#6b7280">(optional)</span></label>
+      <textarea id="q-msg" name="message" placeholder="Conservatory, solar panels, access, parking…"></textarea>
+      <input type="hidden" name="measurement" id="measurement">
+      <input type="hidden" name="service" value="Roof cleaning">
+      <input type="hidden" name="_subject" value="Roof calculator enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <button class="btn btn--primary btn--block" type="submit">Request my fixed quote</button>
+      <p class="form__note">No obligation · No payment until job completion</p>
+    </form>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bar" style="border:0;margin:0;padding:0">
+      <span>© <span id="year">2026</span> <span data-cfg="business.name">The Exterior Cleaners North West</span></span>
+      <span><a href="index.html">Back to the landing page</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn--dark" data-tel href="tel:">Call us</a>
+  <a class="btn btn--primary" href="#quote">Get a quote</a>
+</div>
+
+<script src="site-config.js"></script>
+<script src="site.js"></script>
+<script src="measure.js"></script>
+</body>
+</html>
