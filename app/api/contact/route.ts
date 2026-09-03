@@ -44,7 +44,10 @@ export async function POST(request: Request) {
       "[contact] CONTACT_EMAIL is not set — enquiry NOT delivered:",
       { name, email, ...data }
     );
-    return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 500 });
+    return NextResponse.json(
+      { error: FALLBACK_MESSAGE, code: "no-destination" },
+      { status: 500 }
+    );
   }
 
   // FormSubmit refuses requests without a browser origin, and answers 200
@@ -87,7 +90,15 @@ export async function POST(request: Request) {
 
     // "success" is the string "true"/"false", not a boolean.
     if (String(body.success) !== "true") {
-      throw new Error(body.message || "FormSubmit rejected the submission");
+      console.error("[contact] FormSubmit refused:", body);
+      return NextResponse.json(
+        {
+          error: FALLBACK_MESSAGE,
+          code: "rejected",
+          detail: body.message ?? null,
+        },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({ ok: true });
@@ -98,6 +109,13 @@ export async function POST(request: Request) {
       email,
       ...data,
     });
-    return NextResponse.json({ error: FALLBACK_MESSAGE }, { status: 500 });
+    return NextResponse.json(
+      {
+        error: FALLBACK_MESSAGE,
+        code: "unreachable",
+        detail: err instanceof Error ? err.message : String(err),
+      },
+      { status: 500 }
+    );
   }
 }
