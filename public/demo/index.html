@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<base href="/demo/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instant Quote Calculator — Live Demo</title>
+<meta name="description" content="Live demo: let your website visitors measure their own roof, driveway or lawn on a satellite map and see your price instantly. Works for any trade priced by the square metre.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Neutral demo palette - a client's own colours replace these. */
+  :root{--lime:#38bdf8;--lime-2:#0ea5e9;--lime-rgb:56,189,248}
+
+  .demobar{background:var(--ink-2);border-bottom:1px solid var(--line);padding:11px 0;font-size:13px}
+  .demobar__in{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .tag{display:inline-flex;align-items:center;gap:7px;background:rgba(var(--lime-rgb),.14);border:1px solid rgba(var(--lime-rgb),.4);color:var(--lime);
+       font:700 10.5px/1 Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+  .swatches{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .swatches span{font-size:12px;color:#6b7280}
+  .swatches button{width:24px;height:24px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;transition:.15s}
+  .swatches button:hover{transform:scale(1.12)}
+  .swatches button[aria-pressed="true"]{border-color:var(--white)}
+  .note{background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--lime);border-radius:0 10px 10px 0;padding:16px 20px;font-size:14px;margin:0 0 28px}
+  .note b{color:var(--white)}
+  .trades{display:flex;flex-wrap:wrap;gap:9px;list-style:none;padding:0;margin:24px 0 0}
+  .trades li{background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13.5px;color:var(--text-2)}
+  @media (max-width:720px){ .swatches{margin-left:0;width:100%} }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#">
+      <b>Instant Quote Calculator</b>
+      <span>Live demo</span>
+    </a>
+    <nav class="nav">
+      <a href="#try">Try it</a>
+      <a href="#how">How it works</a>
+      <a href="#trades">Which trades</a>
+      <a href="#talk">Get it on your site</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="btn btn--primary" href="#try">Try the demo</a>
+    </div>
+  </div>
+</header>
+
+<div class="demobar">
+  <div class="wrap demobar__in">
+    <span class="tag">Demo</span>
+    <span>Everything here — services, rates, wording, colours — is set by the business owner in one file.</span>
+    <div class="swatches" id="swatches">
+      <span>Brand colour:</span>
+      <button data-c="#38bdf8" data-c2="#0ea5e9" data-rgb="56,189,248" style="background:#38bdf8" aria-pressed="true" aria-label="Blue"></button>
+      <button data-c="#a6e22e" data-c2="#8fce1c" data-rgb="166,226,46" style="background:#a6e22e" aria-pressed="false" aria-label="Lime"></button>
+      <button data-c="#f97316" data-c2="#ea580c" data-rgb="249,115,22" style="background:#f97316" aria-pressed="false" aria-label="Orange"></button>
+      <button data-c="#ef4444" data-c2="#dc2626" data-rgb="239,68,68" style="background:#ef4444" aria-pressed="false" aria-label="Red"></button>
+      <button data-c="#f5c542" data-c2="#e0ae1f" data-rgb="245,197,66" style="background:#f5c542" aria-pressed="false" aria-label="Gold"></button>
+      <button data-c="#a78bfa" data-c2="#8b5cf6" data-rgb="167,139,250" style="background:#a78bfa" aria-pressed="false" aria-label="Purple"></button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO + TOOL ============ -->
+<section class="hero" id="try">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div>
+        <p class="eyebrow">Instant online quoting</p>
+        <h1>Let customers price <span class="lime">their own job</span></h1>
+        <p class="lead">Your visitor types their postcode, traces their roof, driveway or lawn on the
+          satellite map, and sees your price straight away. You get the measurement, the address and
+          the enquiry by email — before anyone picks up the phone.</p>
+        <ul class="chips">
+          <li>Works on any website</li>
+          <li>No app, no login</li>
+          <li>Measurements within ~5%</li>
+        </ul>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#rt-address">Try it yourself</a>
+          <a class="btn btn--dark" href="#talk">Get it on my site</a>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="padding:22px">
+          <p class="eyebrow" style="margin-bottom:10px">Why it wins work</p>
+          <ul class="ticks">
+            <li>Answers "how much?" instantly, at 11pm, without you</li>
+            <li>Filters out tyre-kickers before they book a visit</li>
+            <li>Arrives with the roof already measured</li>
+            <li>Keeps people on your site instead of a competitor's</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:34px">
+      <b>Try it:</b> pick a service, type any UK postcode, then click round the roof or driveway on the
+      map. Double-click to close the shape. The rates below are examples — a real site uses yours.
+    </p>
+
+    <div id="roof-tool"></div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <ul>
+      <li><b>60 seconds</b><span>From postcode to price</span></li>
+      <li><b>Any m² job</b><span>Roofs, drives, lawns, render</span></li>
+      <li><b>Your rates</b><span>Set per service, changed anytime</span></li>
+      <li><b>Your branding</b><span>Colours, logo, wording</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how">
+  <div class="wrap center">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps for your customer</h2>
+    <p class="lead">The same satellite measuring method an estimator uses on site — just done by the customer.</p>
+    <div class="grid grid--3" style="margin-top:38px;text-align:left">
+      <div class="card">
+        <div class="card__num">1</div>
+        <h3>They find their home</h3>
+        <p>A postcode drops the map straight onto their property in high-resolution satellite view.</p>
+      </div>
+      <div class="card">
+        <div class="card__num">2</div>
+        <h3>They trace the area</h3>
+        <p>Click each corner to draw round it. Extra shapes cover a garage, extension or second patio.</p>
+      </div>
+      <div class="card">
+        <div class="card__num">3</div>
+        <h3>You get the enquiry</h3>
+        <p>Name, phone, address and the exact measurement land in your inbox, with the price they saw.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRADES ============ -->
+<section id="trades" class="sep">
+  <div class="wrap">
+    <div class="quote__grid">
+      <div>
+        <p class="eyebrow">Who it suits</p>
+        <h2>Any job you price by the square metre</h2>
+        <p class="lead">If your quote starts with "how big is it?", this does the measuring for you.
+          Each service gets its own rate and minimum charge, and sloped surfaces are handled properly —
+          a roof seen from above is smaller than the roof you actually work on, so the pitch is factored in.</p>
+        <ul class="trades">
+          <li>Roof cleaning</li><li>Jet washing</li><li>Render &amp; K-rend</li>
+          <li>Re-roofing</li><li>Resin drives</li><li>Block paving</li>
+          <li>Artificial grass</li><li>Turfing</li><li>Decking</li>
+          <li>Solar panels</li><li>Fascias &amp; guttering</li><li>Landscaping</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What the business owner controls</h3>
+        <ul class="ticks" style="margin-top:16px">
+          <li>Which services appear, and in what order</li>
+          <li>Price per m² and minimum charge for each</li>
+          <li>Whether roof pitch applies to that service</li>
+          <li>Where the map opens before a search</li>
+          <li>Company name, phone, email, service area</li>
+          <li>Brand colours and logo</li>
+          <li>Where enquiries are emailed</li>
+        </ul>
+        <p style="margin:16px 0 0;font-size:13px;color:#6b7280">All of it lives in a single
+          <code style="background:#000;border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--lime);font-size:12px">site-config.js</code>
+          file — no rebuild, no developer needed for a price change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / FORM ============ -->
+<section class="quote" id="talk">
+  <div class="wrap">
+    <div class="quote__grid">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2>Put this on your website</h2>
+        <p class="lead">It drops into an existing site as its own page, or embeds inside a page you
+          already have. Static files — it'll run anywhere, including your current host.</p>
+        <ul class="ticks" style="margin-top:22px">
+          <li>Set up with your services and rates</li>
+          <li>Matched to your existing branding</li>
+          <li>Enquiries emailed straight to you</li>
+          <li>Running costs are usually nil — Google's free mapping allowance covers around 10,000 uses a month</li>
+        </ul>
+      </div>
+
+      <form class="form" id="quote-form" method="POST" action="#">
+        <h3 style="margin-bottom:6px">See it with your own numbers</h3>
+        <p style="font-size:13px;margin-bottom:18px">Demo form — it won't send anything.</p>
+        <div class="summary" id="quote-summary"></div>
+
+        <div class="form__row">
+          <div><label for="q-name">Your name</label><input id="q-name" name="name" placeholder="Jane Smith"></div>
+          <div><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" placeholder="07…"></div>
+        </div>
+        <label for="q-email">Email</label>
+        <input id="q-email" name="email" type="email" placeholder="you@business.co.uk">
+        <label for="quote-address">Business / address</label>
+        <input id="quote-address" name="address" placeholder="Business name and area covered">
+        <label for="q-service">Trade</label>
+        <select id="q-service" name="service">
+          <option>Roof cleaning</option>
+          <option>Jet washing</option>
+          <option>Roofing</option>
+          <option>Driveways &amp; landscaping</option>
+          <option>Artificial grass</option>
+          <option>Something else</option>
+        </select>
+        <label for="q-msg">Anything else? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#6b7280">(optional)</span></label>
+        <textarea id="q-msg" name="message" placeholder="What do you price by the m²?"></textarea>
+
+        <input type="hidden" name="measurement" id="measurement">
+        <button class="btn btn--primary btn--block" type="submit">Send enquiry</button>
+        <p class="form__note" id="form-note">Demo only — nothing is submitted or stored.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__bar" style="border:0;margin:0;padding:0">
+      <span>© <span id="year">2026</span> Instant Quote Calculator — demonstration site</span>
+      <span>Satellite imagery &amp; mapping by Google</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site-config.js"></script>
+<script src="site.js"></script>
+<script src="measure.js"></script>
+<script>
+/* Demo-only extras: brand colour switching and a form that doesn't send. */
+(function () {
+  var sw = document.getElementById("swatches");
+  sw.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-c]");
+    if (!b) return;
+    var r = document.documentElement.style;
+    r.setProperty("--lime", b.dataset.c);
+    r.setProperty("--lime-2", b.dataset.c2);
+    r.setProperty("--lime-rgb", b.dataset.rgb);
+    Array.prototype.forEach.call(sw.querySelectorAll("button"), function (x) {
+      x.setAttribute("aria-pressed", String(x === b));
+    });
+  });
+
+  document.getElementById("quote-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var note = document.getElementById("form-note");
+    note.textContent = "Thanks — on a real site this would have emailed the enquiry, with the measurement attached.";
+    note.style.color = "var(--lime)";
+  });
+})();
+</script>
+</body>
+</html>

@@ -46,7 +46,7 @@ export default function HowItWorks() {
 
       <div className="mt-10 text-center">
         <a
-          href="https://measure-demo-lemon.vercel.app"
+          href="/demo"
           target="_blank"
           rel="noopener"
           className="rounded-full bg-brand-600 px-7 py-3 font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:bg-brand-700"

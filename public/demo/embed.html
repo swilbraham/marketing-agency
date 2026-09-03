@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<base href="/demo/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instant quote calculator</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Just the tool — no header, footer or duplicate enquiry form, because
+     the host page already has its own. Transparent so it sits on any
+     background the WordPress theme uses. */
+  html, body { background: transparent; }
+  body { padding: 0; margin: 0; }
+  .embed { padding: 0; }
+  .callbar { display: none !important; }
+</style>
+</head>
+<body>
+  <div class="embed"><div id="roof-tool"></div></div>
+
+  <script src="site-config.js"></script>
+  <script src="site.js"></script>
+  <script src="measure.js"></script>
+  <script>
+    /* No form on this page, so send the visitor to the host page's own
+       enquiry form when they press the call-to-action. The host can set
+       ?cta=#their-form-id to control where it scrolls to. */
+    (function () {
+      var target = new URLSearchParams(location.search).get("cta") || "#quote";
+      var btn = document.getElementById("rt-cta");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        try {
+          window.parent.postMessage(
+            { type: "roof-tool:cta", target: target, summary: window.RoofTool.getSummary() },
+            "*"
+          );
+        } catch (e) { /* parent refused the message */ }
+      }, true);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+/* =============================================================
+   Roof cleaning price calculator — styles
+   Brand: black + lime, Montserrat headings / Poppins body
+   ============================================================= */
+:root{
+  --ink:#0a0a0a;
+  --ink-2:#111213;
+  --ink-3:#17191a;
+  --line:rgba(255,255,255,.10);
+  --line-2:rgba(255,255,255,.18);
+  --lime:#a6e22e;
+  --lime-2:#8fce1c;
+  --lime-rgb:166,226,46;   /* same accent, for translucent tints */
+  --text:#9ca3af;
+  --text-2:#c7ccd1;
+  --white:#fff;
+  --radius:14px;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+  --wrap:1220px;
+}
+
+*{box-sizing:border-box}
+/* The hidden attribute must win over any display rule below (e.g. the map
+   overlay is display:grid, which would otherwise keep it covering the map). */
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ink);color:var(--text);
+  font:400 16px/1.65 Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.mont{font-family:Montserrat,system-ui,sans-serif;color:var(--white);text-transform:uppercase;line-height:1.05;margin:0}
+h1{font-weight:900;font-size:clamp(34px,5.4vw,68px)}
+h2{font-weight:900;font-size:clamp(26px,3.6vw,44px)}
+h3{font-weight:800;font-size:20px}
+p{margin:0 0 16px}
+a{color:var(--lime);text-decoration:none}
+img{max-width:100%;display:block}
+.lime{color:var(--lime)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+.eyebrow{font:700 12px/1 Montserrat,sans-serif;letter-spacing:.22em;color:var(--lime);text-transform:uppercase;margin:0 0 14px}
+.lead{font-size:17px;max-width:62ch}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+section{padding:84px 0}
+.sep{border-top:1px solid var(--line)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font:800 14px/1 Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;
+  padding:15px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  transition:.18s ease;white-space:nowrap;
+}
+.btn--primary{background:var(--lime);color:#0a0a0a}
+.btn--primary:hover{background:var(--lime-2);transform:translateY(-1px)}
+.btn--dark{background:var(--ink-3);color:var(--white);border-color:var(--line-2)}
+.btn--dark:hover{border-color:var(--lime);color:var(--lime)}
+.btn--ghost{background:transparent;color:var(--text-2);border-color:var(--line-2);padding:11px 18px;font-size:12px}
+.btn--ghost:hover:not(:disabled){border-color:var(--lime);color:var(--lime)}
+.btn--icon{padding:11px 14px;font-size:16px}
+.btn--block{width:100%}
+.btn:disabled{opacity:.38;cursor:not-allowed}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;gap:26px;height:74px}
+.brand{display:flex;flex-direction:column;line-height:1.05}
+.brand b{font:900 17px/1 Montserrat,sans-serif;color:var(--white);text-transform:uppercase;letter-spacing:.02em}
+.brand span{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--lime)}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{font:700 12px/1 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2)}
+.nav a:hover{color:var(--lime)}
+.hdr__cta{display:flex;align-items:center;gap:12px;margin-left:auto}
+.hdr__cta .tel{font:800 16px/1 Montserrat,sans-serif;color:var(--white)}
+.hdr__cta .tel small{display:block;font:400 11px/1.6 Poppins,sans-serif;color:var(--text);text-transform:none;letter-spacing:0}
+.nav + .hdr__cta{margin-left:0}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:60px 0 40px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(900px 420px at 12% -10%,rgba(var(--lime-rgb),.16),transparent 60%),
+    radial-gradient(700px 500px at 90% 0%,rgba(var(--lime-rgb),.07),transparent 60%);
+}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{margin-bottom:18px;max-width:16ch}
+.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding:0;list-style:none}
+.chips li{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-2);background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:8px 15px}
+.chips li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+
+/* ---------- trust bar ---------- */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.trust ul{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;padding:0;list-style:none}
+.trust li{padding:26px 22px;border-left:1px solid var(--line)}
+.trust li:first-child{border-left:0}
+.trust b{display:block;font:900 15px/1.2 Montserrat,sans-serif;color:var(--white);text-transform:uppercase;letter-spacing:.04em}
+.trust span{font-size:13px}
+
+/* =============================================================
+   THE TOOL
+   ============================================================= */
+.tool{
+  display:grid;grid-template-columns:1fr 350px;gap:0;
+  background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.tool__services{
+  grid-column:1/-1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  padding:14px 16px;border-bottom:1px solid var(--line);background:var(--ink-3);
+}
+.tool__serviceslabel{font:700 11px/1 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--text);margin-right:6px}
+.tool__services button{
+  background:transparent;border:1px solid var(--line-2);border-radius:999px;
+  color:var(--text-2);font:700 12px/1 Montserrat,sans-serif;letter-spacing:.05em;
+  text-transform:uppercase;padding:11px 18px;cursor:pointer;transition:.15s;
+}
+.tool__services button:hover{border-color:var(--lime);color:var(--lime)}
+.tool__services button.is-on{background:var(--lime);border-color:var(--lime);color:#0a0a0a}
+
+.tool__mapcol{display:flex;flex-direction:column;min-width:0}
+.tool__search{display:flex;gap:10px;padding:16px;border-bottom:1px solid var(--line);background:var(--ink-3)}
+.tool__searchbox{flex:1;min-width:0}
+.tool__searchbox input,
+.tool__searchbox gmp-place-autocomplete{
+  width:100%;height:52px;border-radius:10px;border:1px solid var(--line-2);
+  background:#0d0e0f;color:var(--white);padding:0 16px;
+  /* Never below 16px: smaller text makes iOS Safari zoom the page on focus. */
+  font:400 16px/1 Poppins,sans-serif;
+}
+.tool__searchbox input::placeholder{color:#6b7280}
+.tool__searchbox input:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(var(--lime-rgb),.15)}
+.tool__searchbox.is-places{display:flex;align-items:stretch}
+.tool__searchbox gmp-place-autocomplete{padding:0;--gmp-mat-color-surface:#0d0e0f;--gmp-mat-color-on-surface:#fff;--gmp-mat-color-outline:rgba(255,255,255,.18)}
+.tool__mapwrap{position:relative;flex:1;min-height:0}
+.tool__map{width:100%;height:clamp(360px,54vh,560px);background:#2a2d30}
+.tool__badge{
+  position:absolute;left:14px;bottom:14px;z-index:2;max-width:calc(100% - 28px);
+  background:rgba(10,10,10,.88);border:1px solid var(--line-2);border-left:3px solid var(--lime);
+  color:var(--white);font-size:13px;padding:9px 14px;border-radius:8px;backdrop-filter:blur(6px);
+}
+.tool__overlay{position:absolute;inset:0;z-index:5;display:grid;place-items:center;background:rgba(10,10,10,.95);padding:24px}
+.tool__overlaybox{max-width:460px;text-align:center;font-size:14px}
+.tool__overlaybox h4{font-size:17px;margin-bottom:10px}
+.tool__overlaybox code{background:#000;border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--lime);font-size:12px}
+.tool__overlaybox .small{font-size:12.5px;color:#6b7280}
+.tool__actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:14px 16px;border-top:1px solid var(--line);background:var(--ink-3)}
+.tool__tip{font-size:12px;color:#6b7280;margin-left:auto}
+
+.tool__panel{border-left:1px solid var(--line);padding:20px;display:flex;flex-direction:column;gap:16px;background:var(--ink-2)}
+.panel__head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.panel__head h3{font-size:15px;letter-spacing:.06em}
+.panel__foot{font-size:11.5px;color:#6b7280;margin:0}
+
+.unitswitch{display:flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden}
+.unitswitch button{background:transparent;border:0;color:var(--text);font:700 11px/1 Montserrat,sans-serif;padding:8px 12px;cursor:pointer}
+.unitswitch button.is-on{background:var(--lime);color:#0a0a0a}
+
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.steps li{display:flex;align-items:center;gap:10px;font-size:13px;color:#6b7280}
+.steps b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1px solid var(--line-2);font:700 11px/1 Montserrat,sans-serif;color:var(--text)}
+.steps li.is-now{color:var(--white)}
+.steps li.is-now b{background:var(--lime);color:#0a0a0a;border-color:var(--lime)}
+.steps li.is-done b{border-color:var(--lime);color:var(--lime)}
+
+.shapes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;max-height:150px;overflow:auto}
+.shapes li{display:flex;align-items:center;gap:10px;background:var(--ink-3);border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13px}
+.shapes__name{color:var(--text-2)}
+.shapes__area{margin-left:auto;color:var(--white);font-weight:600}
+.shapes__del{background:transparent;border:0;color:#6b7280;font-size:17px;line-height:1;cursor:pointer;padding:0 2px}
+.shapes__del:hover{color:#ef4444}
+.shapes__empty{justify-content:center;color:#6b7280;border-style:dashed}
+
+.field label{display:block;font:700 11px/1 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2);margin-bottom:8px}
+.field__hint{font-weight:400;letter-spacing:0;text-transform:none;color:#6b7280;font-family:Poppins,sans-serif;font-size:11px}
+select,input,textarea{font-family:Poppins,sans-serif}
+.field select{
+  width:100%;height:46px;border-radius:10px;border:1px solid var(--line-2);background:#0d0e0f;
+  color:var(--white);padding:0 12px;font-size:14px;appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23a6e22e' stroke-width='2'><path d='M1 1l5 5 5-5'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;
+}
+.field select:focus{outline:none;border-color:var(--lime)}
+
+.totals{margin:0;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:14px}
+.totals div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:5px 0}
+.totals dt{font-size:13px;color:var(--text)}
+.totals dd{margin:0;font-size:14px;color:var(--white);font-weight:600}
+.totals__big{border-top:1px dashed var(--line);margin-top:6px;padding-top:10px!important}
+.totals__big dt{color:var(--white);font-weight:600}
+.totals__big dd{font:900 20px/1 Montserrat,sans-serif;color:var(--lime)}
+
+.price{background:linear-gradient(180deg,rgba(var(--lime-rgb),.12),rgba(var(--lime-rgb),.04));border:1px solid rgba(var(--lime-rgb),.35);border-radius:12px;padding:16px;text-align:center}
+.price__label{display:block;font:700 10.5px/1 Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}
+.price strong{display:block;font:900 40px/1 Montserrat,sans-serif;color:var(--white);margin:8px 0 4px}
+.price__calc{display:block;font-size:12px;color:var(--text-2)}
+.price small{display:block;font-size:11px;color:#8b9199;margin-top:9px;line-height:1.5}
+
+/* ---------- generic cards ---------- */
+.grid{display:grid;gap:18px}
+.grid--2{grid-template-columns:repeat(2,1fr)}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+.grid--4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.18s}
+.card:hover{border-color:rgba(var(--lime-rgb),.45);transform:translateY(-3px)}
+.card h3{margin-bottom:10px;font-size:16px;letter-spacing:.04em}
+.card p{margin:0;font-size:14px}
+.card__num{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--lime);color:#0a0a0a;font:900 16px/1 Montserrat,sans-serif;margin-bottom:16px}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.ticks li{display:flex;gap:11px;font-size:15px}
+.ticks li::before{content:"✓";color:var(--lime);font-weight:700}
+
+/* ---------- quote form ---------- */
+.quote{background:var(--ink-2);border-top:1px solid var(--line)}
+.quote__grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
+.form{background:var(--ink-3);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.form__row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form label{display:block;font:700 11px/1 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2);margin:0 0 7px}
+.form input,.form textarea,.form select{
+  width:100%;background:#0d0e0f;border:1px solid var(--line-2);border-radius:10px;color:var(--white);
+  padding:14px;font-size:16px;margin-bottom:14px;
+}
+.form textarea{min-height:96px;resize:vertical}
+.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 3px rgba(var(--lime-rgb),.13)}
+.form input::placeholder,.form textarea::placeholder{color:#6b7280}
+.form__note{font-size:12px;color:#6b7280;text-align:center;margin:12px 0 0}
+.summary{display:none;background:rgba(var(--lime-rgb),.08);border:1px solid rgba(var(--lime-rgb),.32);border-radius:10px;padding:13px 15px;margin-bottom:16px;font-size:13.5px;color:var(--white)}
+.summary.is-on{display:block}
+.summary b{color:var(--lime)}
+
+/* ---------- footer ---------- */
+.foot{background:#060606;border-top:1px solid var(--line);padding:56px 0 26px;font-size:14px}
+.foot__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.foot h4{font-size:13px;letter-spacing:.14em;margin-bottom:14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot a{color:var(--text)}
+.foot a:hover{color:var(--lime)}
+.foot__bar{border-top:1px solid var(--line);margin-top:36px;padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#6b7280}
+
+/* ---------- mobile call bar ---------- */
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(10,10,10,.96);border-top:1px solid var(--line);padding:10px 14px;gap:10px;backdrop-filter:blur(8px)}
+.callbar .btn{flex:1;padding:13px 12px;font-size:12px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .tool{grid-template-columns:1fr}
+  .tool__panel{border-left:0;border-top:1px solid var(--line)}
+  .hero__grid{grid-template-columns:1fr;gap:26px}
+  .quote__grid{grid-template-columns:1fr;gap:30px}
+  .grid--4{grid-template-columns:repeat(2,1fr)}
+  .grid--2{grid-template-columns:1fr}
+  .trust ul{grid-template-columns:repeat(2,1fr)}
+  .trust li:nth-child(3){border-left:0}
+  .nav{display:none}
+}
+@media (max-width:720px){
+  section{padding:56px 0}
+  .grid--2,.grid--3,.grid--4{grid-template-columns:1fr}
+  .trust ul{grid-template-columns:1fr}
+  .trust li{border-left:0;border-top:1px solid var(--line)}
+  .trust li:first-child{border-top:0}
+  .foot__grid{grid-template-columns:1fr}
+  .form__row{grid-template-columns:1fr}
+  .hdr__cta .tel small{display:none}
+  /* The sticky call bar already offers both actions, so drop the header
+     button rather than let the header overflow the viewport. */
+  .hdr__cta .btn--primary{display:none}
+  .hdr__in{gap:14px;height:64px}
+  .brand b{font-size:15px}
+  .brand span{font-size:9px}
+  .hdr__cta .tel{font-size:15px}
+  /* Search stacks: full-width field, then a full-width Find button with the
+     locate button beside it. Everything at least 52px for thumbs. */
+  .tool__services{padding:12px 14px;gap:7px}
+  .tool__serviceslabel{flex:0 0 100%;margin:0 0 2px}
+  .tool__services button{flex:0 1 auto;min-height:44px;padding:0 14px;font-size:11px}
+  .tool__search{flex-wrap:wrap;padding:14px;gap:10px}
+  .tool__searchbox{flex:0 0 100%}
+  .tool__searchbox input{height:54px;font-size:17px}
+  .tool__search .btn--dark{flex:1;height:52px;padding:0 18px;font-size:14px}
+  .tool__search .btn--icon{flex:0 0 52px;height:52px;font-size:20px}
+  .tool__map{height:clamp(340px,52vh,460px)}
+  .tool__actions{padding:12px 14px;gap:8px}
+  .tool__actions .btn--ghost{flex:1;min-height:46px;font-size:12.5px;padding:0 10px}
+  .unitswitch button{padding:11px 16px;font-size:12px}
+  .field select{height:52px;font-size:15px}
+  .tool__tip{display:none}
+  .callbar{display:flex}
+  body{padding-bottom:64px}
+}
