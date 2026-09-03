@@ -35,18 +35,19 @@
 
 <header class="hdr">
   <div class="wrap hdr__in">
-    <a class="brand" href="#">
-      <b>Instant Quote Calculator</b>
+    <a class="brand" href="/">
+      <b>SkyQuote</b>
       <span>Live demo</span>
     </a>
     <nav class="nav">
       <a href="#try">Try it</a>
       <a href="#how">How it works</a>
       <a href="#trades">Which trades</a>
-      <a href="#talk">Get it on your site</a>
+      <a href="/#pricing">Pricing</a>
     </nav>
     <div class="hdr__cta">
-      <a class="btn btn--primary" href="#try">Try the demo</a>
+      <a class="btn btn--ghost" href="/">&#8592; Back to SkyQuote</a>
+      <a class="btn btn--primary" href="/#pricing">See pricing</a>
     </div>
   </div>
 </header>
@@ -84,7 +85,7 @@
         </ul>
         <div class="hero__cta">
           <a class="btn btn--primary" href="#rt-address">Try it yourself</a>
-          <a class="btn btn--dark" href="#talk">Get it on my site</a>
+          <a class="btn btn--dark" href="/#pricing">Get it on my site</a>
         </div>
       </div>
       <div>
@@ -184,51 +185,19 @@
 
 <!-- ============ CTA / FORM ============ -->
 <section class="quote" id="talk">
-  <div class="wrap">
-    <div class="quote__grid">
-      <div>
-        <p class="eyebrow">Next step</p>
-        <h2>Put this on your website</h2>
-        <p class="lead">It drops into an existing site as its own page, or embeds inside a page you
-          already have. Static files — it'll run anywhere, including your current host.</p>
-        <ul class="ticks" style="margin-top:22px">
-          <li>Set up with your services and rates</li>
-          <li>Matched to your existing branding</li>
-          <li>Enquiries emailed straight to you</li>
-          <li>Running costs are usually nil — Google's free mapping allowance covers around 10,000 uses a month</li>
-        </ul>
-      </div>
-
-      <form class="form" id="quote-form" method="POST" action="#">
-        <h3 style="margin-bottom:6px">See it with your own numbers</h3>
-        <p style="font-size:13px;margin-bottom:18px">Demo form — it won't send anything.</p>
-        <div class="summary" id="quote-summary"></div>
-
-        <div class="form__row">
-          <div><label for="q-name">Your name</label><input id="q-name" name="name" placeholder="Jane Smith"></div>
-          <div><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" placeholder="07…"></div>
-        </div>
-        <label for="q-email">Email</label>
-        <input id="q-email" name="email" type="email" placeholder="you@business.co.uk">
-        <label for="quote-address">Business / address</label>
-        <input id="quote-address" name="address" placeholder="Business name and area covered">
-        <label for="q-service">Trade</label>
-        <select id="q-service" name="service">
-          <option>Roof cleaning</option>
-          <option>Jet washing</option>
-          <option>Roofing</option>
-          <option>Driveways &amp; landscaping</option>
-          <option>Artificial grass</option>
-          <option>Something else</option>
-        </select>
-        <label for="q-msg">Anything else? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#6b7280">(optional)</span></label>
-        <textarea id="q-msg" name="message" placeholder="What do you price by the m²?"></textarea>
-
-        <input type="hidden" name="measurement" id="measurement">
-        <button class="btn btn--primary btn--block" type="submit">Send enquiry</button>
-        <p class="form__note" id="form-note">Demo only — nothing is submitted or stored.</p>
-      </form>
+  <div class="wrap" style="max-width:760px;text-align:center">
+    <p class="eyebrow">Next step</p>
+    <h2>Put this on your website</h2>
+    <p class="lead" style="margin:0 auto 26px">Set up with your services, your rates and your
+      branding. Either as a complete landing page built to run ads at, or as an embed for the
+      website you already have.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn--primary" href="/#pricing">See pricing</a>
+      <a class="btn btn--dark" href="/#contact">Talk to us</a>
     </div>
+    <p style="margin-top:22px;font-size:13px;color:#6b7280">
+      This is a live demo — the rates shown are examples. Yours are set by you.
+    </p>
   </div>
 </section>
 
@@ -260,12 +229,6 @@
     });
   });
 
-  document.getElementById("quote-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var note = document.getElementById("form-note");
-    note.textContent = "Thanks — on a real site this would have emailed the enquiry, with the measurement attached.";
-    note.style.color = "var(--lime)";
-  });
 })();
 </script>
 </body>

@@ -17,3 +17,9 @@ for f in index.html measure.html embed.html measure.js site.js styles.css site-c
 done
 # then re-add the base tag to the three HTML files
 ```
+
+## Second difference: links back to the site
+
+`index.html` and `measure.html` here link to `/` and `/#pricing` so a visitor
+can get back to SkyQuote. The standalone copies in `../measure-demo` can't use
+site-relative links, so don't copy those two files back over the source.
