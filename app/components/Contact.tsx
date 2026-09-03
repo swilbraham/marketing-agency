@@ -4,6 +4,10 @@ import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+/* Where enquiries go. Same address as the footer. */
+const DESTINATION =
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@skyquote.co.uk";
+
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -17,15 +21,33 @@ export default function Contact() {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch("/api/contact", {
+      /* Posted straight from the browser, because FormSubmit blocks calls
+         from datacentre IPs — a server-side forward gets a 403 from Vercel
+         no matter what. The address is already public in the footer. */
+      const res = await fetch(`https://formsubmit.co/ajax/${DESTINATION}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `SkyQuote enquiry — ${data.name ?? ""}`,
+          _template: "table",
+          _captcha: "false",
+          ...data,
+        }),
       });
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body.error || "Something went wrong. Please try again.");
+
+      const body = await res.json().catch(() => ({}));
+
+      /* success is the string "true"/"false", and a rejected submission
+         still comes back as HTTP 200 — so never trust the status alone. */
+      if (!res.ok || String(body.success) !== "true") {
+        throw new Error(
+          body.message || "Sorry — that didn't send. Please try again."
+        );
       }
+
       setStatus("success");
       form.reset();
     } catch (err) {
