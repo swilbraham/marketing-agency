@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import OfferBar from "../../components/OfferBar";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Contact from "../../components/Contact";
@@ -60,6 +61,7 @@ const faqs = [
 export default function QuoteCalculatorPage() {
   return (
     <>
+      <OfferBar />
       <Header />
       <main className="flex-1">
         <section className="bg-gradient-to-b from-brand-50 to-white">

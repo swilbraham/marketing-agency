@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { featuredProduct } from "../data/products";
+import HeroPrice from "./HeroPrice";
 
 const points = [
   "Answers “how much?” while you’re on the tools",
@@ -70,9 +71,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <p className="mt-4 text-sm text-slate-500">
-              No sign-up. From £199 to have it built and installed.
-            </p>
+            <HeroPrice />
           </div>
 
           {/* The product itself, because that is what we are selling. */}

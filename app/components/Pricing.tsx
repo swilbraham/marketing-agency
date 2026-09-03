@@ -1,10 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { offer, isLive, discount, endsLabel } from "../data/offer";
+
 /* ---------------------------------------------------------------
-   Two ways to buy. Edit the numbers and wording here.
+   Two ways to buy. Edit the numbers and wording here. `setup` is a
+   plain number so the launch discount can be applied to it.
    --------------------------------------------------------------- */
 const tiers = [
   {
     name: "Complete landing page",
-    setup: "£399",
+    setup: 399,
     monthly: "£79",
     tagline:
       "A fully branded page built to run Google and Meta ads at, with the calculator in it.",
@@ -22,7 +28,7 @@ const tiers = [
   },
   {
     name: "Calculator embed",
-    setup: "£199",
+    setup: 199,
     monthly: "£39",
     tagline:
       "The calculator on its own, to drop into the website you already have.",
@@ -48,6 +54,15 @@ const included = [
 ];
 
 export default function Pricing() {
+  /* Re-checked in the browser so the offer expires on time without a
+     redeploy. */
+  const [live, setLive] = useState(isLive());
+  useEffect(() => {
+    const t = setInterval(() => setLive(isLive()), 60000);
+    setLive(isLive());
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <section id="pricing" className="bg-slate-50 py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -81,12 +96,28 @@ export default function Pricing() {
               )}
               <h3 className="text-lg font-semibold">{t.name}</h3>
 
-              <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold">{t.setup}</span>
+              <div className="mt-4 flex items-baseline gap-2">
+                {live && (
+                  <span
+                    className={`text-xl font-semibold line-through ${
+                      t.featured ? "text-slate-500" : "text-slate-400"
+                    }`}
+                  >
+                    £{t.setup}
+                  </span>
+                )}
+                <span className="text-4xl font-extrabold">
+                  £{live ? discount(t.setup) : t.setup}
+                </span>
                 <span className={t.featured ? "text-slate-300" : "text-slate-500"}>
                   one-off
                 </span>
               </div>
+              {live && (
+                <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-brand-500">
+                  Save £{t.setup - discount(t.setup)} — ends {endsLabel()}
+                </p>
+              )}
               <p
                 className={`mt-1 text-sm font-medium ${
                   t.featured ? "text-brand-300" : "text-brand-600"
@@ -137,6 +168,13 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+
+        {live && (
+          <p className="mx-auto mt-8 max-w-2xl rounded-2xl bg-brand-50 p-4 text-center text-sm font-medium text-brand-700 ring-1 ring-brand-200">
+            Launch offer: {offer.percentOff}% off {offer.what} until{" "}
+            {endsLabel()}. The monthly price is unchanged.
+          </p>
+        )}
 
         <div className="mx-auto mt-12 max-w-3xl rounded-2xl bg-white p-7 ring-1 ring-slate-200">
           <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-slate-500">
