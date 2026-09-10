@@ -76,7 +76,7 @@ export default function Pricing() {
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             A one-off fee to build it, then a monthly for hosting, support and
-            as many changes as you want. No contract.
+            keeping your prices up to date. No contract.
           </p>
         </div>
 
