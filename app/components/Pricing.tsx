@@ -11,7 +11,7 @@ const tiers = [
   {
     name: "Complete landing page",
     setup: 399,
-    monthly: "£79",
+    monthly: "£49",
     tagline:
       "A fully branded page built to run Google and Meta ads at, with the calculator in it.",
     features: [
