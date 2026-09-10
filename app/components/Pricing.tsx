@@ -19,7 +19,8 @@ const tiers = [
       "Your own domain and email address, set up for you",
       "Quote calculator built in, with your services and rates",
       "Built for Google Ads and Meta traffic to land on",
-      "Unlimited edits — send them over and we make them",
+      "Price and service changes any time, same day",
+      "Two content or design updates a month included",
       "Hosting, SSL and the Google mapping bill covered",
       "Enquiries emailed to you with the measurement attached",
     ],
@@ -28,8 +29,8 @@ const tiers = [
   },
   {
     name: "Calculator embed",
-    setup: 199,
-    monthly: "£39",
+    setup: 99,
+    monthly: "£29",
     tagline:
       "The calculator on its own, to drop into the website you already have.",
     features: [
@@ -37,7 +38,7 @@ const tiers = [
       "A snippet of code to paste into your WordPress page",
       "Step-by-step instructions for adding it",
       "You install it on your site — we tell you exactly how",
-      "Unlimited price and service changes",
+      "Price and service changes any time, same day",
       "Hosting and the Google mapping bill covered",
       "Enquiries emailed to you with the measurement attached",
     ],
@@ -48,7 +49,7 @@ const tiers = [
 
 const included = [
   "No contract — cancel with 30 days' notice",
-  "Unlimited edits for as long as you're with us",
+  "Price and service changes any time, for as long as you're with us",
   "We host it and keep it running, so there's nothing to manage",
   "On the landing page plan, the domain is yours to keep if you leave",
 ];
