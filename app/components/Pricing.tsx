@@ -76,7 +76,9 @@ export default function Pricing() {
           </h2>
           <p className="mt-4 text-lg text-slate-600">
             A one-off fee to build it, then a monthly for hosting, support and
-            keeping your prices up to date. No contract.
+            keeping your prices up to date. No contract. It works best where a
+            single job is worth a few hundred pounds or more &mdash; roof
+            cleaning, resin, re-roofing, render, artificial grass.
           </p>
         </div>
 
@@ -176,6 +178,29 @@ export default function Pricing() {
             {endsLabel()}. The monthly price is unchanged.
           </p>
         )}
+
+        {/* The real objection isn't the price, it's whether it works. This
+            removes it without discounting the monthly. */}
+        <div className="mx-auto mt-12 max-w-3xl rounded-2xl border-2 border-brand-600 bg-white p-7">
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-brand-50 text-brand-600">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold">
+                No enquiries in your first 30 days? Don&rsquo;t pay for month two.
+              </h3>
+              <p className="mt-1 text-slate-600">
+                We think it&rsquo;ll pay for itself with one job. If it hasn&rsquo;t brought
+                you a single enquiry in the first month, tell us and we&rsquo;ll cancel the
+                next payment &mdash; keep the page, no argument.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="mx-auto mt-12 max-w-3xl rounded-2xl bg-white p-7 ring-1 ring-slate-200">
           <h3 className="text-center text-sm font-semibold uppercase tracking-wide text-slate-500">
