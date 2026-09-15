@@ -18,6 +18,12 @@ done
 # then re-add the base tag to the three HTML files
 ```
 
+## Third difference: tracking
+
+`index.html` and `measure.html` load `/track.js` (consent banner + GA4/Meta
+pixel + DemoStarted/DemoCompleted events) just before `</body>`. Re-add the
+tag after any sync from `../measure-demo`.
+
 ## Second difference: links back to the site
 
 `index.html` and `measure.html` here link to `/` and `/#pricing` so a visitor

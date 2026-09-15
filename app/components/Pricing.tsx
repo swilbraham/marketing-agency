@@ -1,7 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { offer, isLive, discount, endsLabel } from "../data/offer";
+import { offer, isLive, discount } from "../data/offer";
 
 /* ---------------------------------------------------------------
    Two ways to buy. Edit the numbers and wording here. `setup` is a
@@ -55,14 +52,7 @@ const included = [
 ];
 
 export default function Pricing() {
-  /* Re-checked in the browser so the offer expires on time without a
-     redeploy. */
-  const [live, setLive] = useState(isLive());
-  useEffect(() => {
-    const t = setInterval(() => setLive(isLive()), 60000);
-    setLive(isLive());
-    return () => clearInterval(t);
-  }, []);
+  const live = isLive();
 
   return (
     <section id="pricing" className="bg-slate-50 py-20 md:py-24">
@@ -118,7 +108,7 @@ export default function Pricing() {
               </div>
               {live && (
                 <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-brand-500">
-                  Save £{t.setup - discount(t.setup)} — ends {endsLabel()}
+                  Save £{t.setup - discount(t.setup)} — launch pricing
                 </p>
               )}
               <p
@@ -174,8 +164,8 @@ export default function Pricing() {
 
         {live && (
           <p className="mx-auto mt-8 max-w-2xl rounded-2xl bg-brand-50 p-4 text-center text-sm font-medium text-brand-700 ring-1 ring-brand-200">
-            Launch offer: {offer.percentOff}% off {offer.what} until{" "}
-            {endsLabel()}. The monthly price is unchanged.
+            Launch pricing: {offer.percentOff}% off {offer.what},{" "}
+            {offer.reason}. The monthly price is unchanged.
           </p>
         )}
 

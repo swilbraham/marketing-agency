@@ -50,6 +50,8 @@ export default function Contact() {
 
       setStatus("success");
       form.reset();
+      /* Ad-platform conversion event; no-op until tracking is configured. */
+      (window as unknown as { sqTrack?: (n: string) => void }).sqTrack?.("Lead");
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Something went wrong.");
@@ -131,7 +133,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={4}
-                  placeholder="e.g. more local bookings, more enquiries from Facebook & Instagram…"
+                  placeholder="e.g. roof cleaning and resin drives — tell us your services and rough rates…"
                   className="w-full rounded-xl border border-slate-200 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                 />
               </div>
@@ -150,7 +152,10 @@ export default function Contact() {
                 {status === "loading" ? "Sending…" : "Send my details"}
               </button>
               <p className="text-center text-xs text-slate-400">
-                We’ll only use your details to reply. No spam, ever.
+                We’ll only use your details to reply. No spam, ever.{" "}
+                <a href="/privacy" className="underline hover:text-slate-600">
+                  Privacy policy
+                </a>
               </p>
             </form>
           )}
